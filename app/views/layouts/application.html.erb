@@ -18,7 +18,19 @@
       </div>
       <div class="modal-body">
 
-	
+	 
+      <%= form_for Yo.new, validate: true do |f| %>
+        <div class="field">
+          <%= f.label :title %><br>
+          <%= f.text_field :title %>
+        </div>
+        <div class="actions">
+          <%= f.submit %>
+        </div>
+      <% end %>
+
+
+
       </div>
       <div class="modal-footer">
         <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
@@ -31,18 +43,6 @@
 
 
 <a class="btn btn-primary btn-lg uppercase shadow" href="#" data-toggle="modal" data-target="#bootstrapmodalbox">Open Modal Box</a>
-
-
-	    <%= form_for Yo.new, validate: true do |f| %>
-			  <div class="field">
-			    <%= f.label :title %><br>
-			    <%= f.text_field :title %>
-			  </div>
-			  <div class="actions">
-			    <%= f.submit %>
-			  </div>
-			<% end %>
-
 
 
 		<script type="text/javascript">
